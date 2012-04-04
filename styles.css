@@ -1,14 +1,24 @@
 h1 {
-  font-family: "Lobster", serif;
-  margin-top: 0.5em;
-  color: #268bd2; }
+  font-family: "Lekton", serif;
+  font-size: 50px;
+  color: #dc322f;
+  line-height: 1.125em; }
 
 h2 {
-  font-family: "Lekton", sans-serif;
-  color: #cb4b16; }
+  font-family: "Lobster", serif;
+  color: #268bd2; }
+
+h3 {
+  color: #dc322f;
+  font-family: "Lekton"; }
 
 .acenter {
   text-align: center; }
+
+.smaller p {
+  font-size: 80%;
+  border-top: 1px solid #586e75;
+  margin-top: 10px; }
 
 p {
   font-family: "Lekton", sans-serif; }
