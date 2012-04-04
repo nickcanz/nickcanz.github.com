@@ -1,7 +1,14 @@
 h1 {
-  font-family: 'Lobster', serif;
-}
+  font-family: "Lobster", serif;
+  margin-top: 0.5em;
+  color: #268bd2; }
 
 h2 {
-  font-family: 'Lekton', sans-serif;
-}
+  font-family: "Lekton", sans-serif;
+  color: #cb4b16; }
+
+.acenter {
+  text-align: center; }
+
+p {
+  font-family: "Lekton", sans-serif; }
