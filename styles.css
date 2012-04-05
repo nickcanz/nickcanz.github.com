@@ -1,16 +1,24 @@
+a:hover {
+  background-color: #eee8d5; }
+
 h1 {
-  font-family: "Lekton", serif;
+  font-family: "Goudy Bookletter 1911", serif;
   font-size: 50px;
   color: #dc322f;
-  line-height: 1.125em; }
+  line-height: 1.125em;
+  margin-top: 0.5em; }
 
 h2 {
-  font-family: "Lobster", serif;
+  font-family: "Lekton", sans-serif;
   color: #268bd2; }
 
 h3 {
   color: #dc322f;
-  font-family: "Lekton"; }
+  font-family: "Goudy Bookletter 1911", serif;
+  font-size: 24px; }
+
+h4 {
+  font-family: "Lekton", sans-serif; }
 
 .acenter {
   text-align: center; }
