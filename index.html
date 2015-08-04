@@ -1,59 +1,32 @@
-<!DOCTYPE html>
-<html lang='en'>
-  <head>
-    <meta content='width=device-width, initial-scale=1.0' name='viewport'>
-    <link href='bootstrap.css' rel='stylesheet' type='text/css'>
-    <link href='bootstrap-responsive.css' rel='stylesheet' type='text/css'>
-    <link href='styles.css' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911|Lekton' rel='stylesheet' type='text/css'>
-    <title>Nick Canzoneri | Software Engineer</title>
-  </head>
-  <body>
-    <div class='container'>
-      <div class='row'>
-        <div class='span12 acenter'>
-          <h1>Nick Canzoneri</h1>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='span12 acenter'>
-          <h2>Software Engineer</h2>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='span6 offset3'>
-          <h3>Hi</h3>
-          
-          <p>I&#39;m Nick.</p>
-          
-          <p>I write software in <a href="http://www.phila.gov">Philadelphia</a>. I attended <a href="http://www.drexel.edu">Drexel</a> for Computer Science. I&#39;ve worked at <a href="http://www.dvrpc.org">DVRPC</a> (a regional planning organization), <a href="http://www.algorithmics.com">Algorithmics</a> (a financial software company) which was bought by <a href="http://www.ibm.com">IBM</a>. I worked at <a href="http://www.relaynetwork.com/">Relay Network</a>, a startup changing the way people communicate with business using Clojure. Now, I work at <a href="http://www.wildbit.com">Wildbit</a> on <a href="http://www.postmarkapp.com">Postmark</a>, which is an API for transactional email.</p>
-          
-          <h3>Find me at</h3>
-          
-          <p><a href="http://www.github.com/nickcanz">Github nickcanz</a></p>
-          
-          <p><a href="http://www.twitter.com/nick_canz">Twitter @nick_canz</a></p>
-          
-          <p><a href="http://stackoverflow.com/users/282975/nick-canzoneri">stackoverflow</a></p>
-          
-          <p>Feel free to contact me at: <a href="mailto:hi@nickcanzoneri.com">hi@nickcanzoneri.com</a></p>
-          
-          <h3>Some Projects</h3>
-          
-          <h4><a href="https://punchcard.io">Punchcard</a></h4>
-          
-          <p>I&#39;ve been helping my friend Aaron Feng with his project Punchcard. The basic idea is that going to user groups take a lot of time and are a general hassle in your schedule but show that you are dedicated to improving yourself. Going to user groups should count. Punchcard aims to be part of your resume showing off your user group credentials.</p>
-          
-          <h4><a href="http://www.theotherphiladelphia.org">The Other Philadelphia</a></h4>
-          
-          <p>This project was built on 25 Feb for <a href="http://technicallyphilly.com/2012/02/27/mayor-michael-nutter-visits-code-across-america-civic-hackathon-lobbying-ph-wins-first-place">Code Across America Hackathon</a> run by the folks at <a href="http://codeforamerica.org/">Code for America</a>. The idea for the project was to make particular statistics about Philadelphia (unemployment, poverty etc) more <em>real</em> for people who aren&#39;t familiar with those stats. The site takes a random sampling of your Facebook friends and &quot;tags&quot; them with &quot;Unemployed&quot; or &quot;High School Dropout&quot; to make that data really hit home.</p>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='span6 offset3 smaller acenter'>
-          <p>Colors used from Ethan Schoonover&#39;s awesome <a href="http://ethanschoonover.com/solarized">Solarized color theme</a>.</p>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Hi</h1>
+  <p>I'm Nick.</p>
+  <p>I write software in <a href="http://www.phila.gov">Philadelphia</a>. I attended <a href="http://www.drexel.edu">Drexel</a> for Computer Science. I've worked at <a href="http://www.dvrpc.org">DVRPC</a> (a regional planning organization), <a href="http://www.algorithmics.com">Algorithmics</a> (a financial software company) which was bought by <a href="http://www.ibm.com">IBM</a>. I worked at <a href="http://www.relaynetwork.com/">Relay Network</a>, a startup changing the way people communicate with business using Clojure. Now, I work at <a href="http://www.wildbit.com">Wildbit</a> on <a href="http://www.postmarkapp.com">Postmark</a>, which is an API for transactional email.</p>
+
+  <h1 class="page-heading">Find me at</h1>
+  <p><a href="http://www.github.com/nickcanz">Github nickcanz</a></p>
+  <p><a href="http://www.twitter.com/nick_canz">Twitter @nick_canz</a></p>
+  <p><a href="http://stackoverflow.com/users/282975/nick-canzoneri">stackoverflow</a></p>
+  <p>Feel free to contact me at: <a href="mailto:hi@nickcanzoneri.com">hi@nickcanzoneri.com</a></p>
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

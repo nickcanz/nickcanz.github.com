@@ -1,0 +1,12 @@
+# Site settings
+title: Nick Canzoneri
+email: hi@nickcanzoneri.com
+description: > # this means to ignore newlines until "baseurl:"
+  Nick Canzoneri's site
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://nickcanzoneri.com" # the base hostname & protocol for your site
+twitter_username: nick_canz
+github_username:  nickcanz
+
+# Build settings
+markdown: kramdown
