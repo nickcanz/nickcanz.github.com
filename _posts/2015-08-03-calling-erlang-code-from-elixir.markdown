@@ -9,13 +9,9 @@ I’ve been playing around with Elixir recently and thought I’d share one of t
 
 So, I know _slightly_ more than nothing about Elixir and Erlang. I also can’t read through a tutorial to save my life. I learn best by picking a small task and then using my finely honed Google skills to accomplish the task.
 
-The task I wanted to accomplish was to lookup a DNS record for a domain. Luckily, Erlang has a built in function to accomplish this, [inet_res:lookup/3](http://www.erlang.org/doc/man/inet_res.html#lookup-3). Calling this function through the Erlang repl would look like:
+The task I wanted to accomplish was to lookup a DNS record for a domain. Luckily, Erlang has a built in function to accomplish this, [inet_res:lookup/3](http://www.erlang.org/doc/man/inet_res.html#lookup-3). Calling this function through the Erlang repl `erl` would look like:
 
-{% highlight bash %}
-$ erl
-Erlang/OTP 17 [erts-6.4] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
-
-Eshell V6.4  (abort with ^G)
+{% highlight erlang %}
 1> inet_res:lookup("erlang.com", in, mx).
 [{20,"mail.erlang.com"}]
 {% endhighlight %}
@@ -35,14 +31,9 @@ This should be pretty easy to convert to Elixir, right? I found the [calling fun
 > 
 >:lists.sort [3, 2, 1]
 
-That sounds easy enough! Staring up the Elixir repl and calling this new code:
+That sounds easy enough! Staring up the Elixir repl `iex` and calling this new code:
 
-
-{% highlight bash %}
-$ iex
-Erlang/OTP 17 [erts-6.4] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
-
-Interactive Elixir (1.0.5) - press Ctrl+C to exit (type h() ENTER for help)
+{% highlight elixir %}
 iex(1)> :inet_res.lookup("erlang.com", :in, :mx)
 []
 {% endhighlight %}
@@ -53,11 +44,7 @@ Hmm...no results. This is odd. This is where my lack of knowledge about both lan
 
 This seems to be the issue. Let's test it out in the Elixir repl:
 
-{% highlight bash %}
-$ iex
-Erlang/OTP 17 [erts-6.4] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
-
-Interactive Elixir (1.0.5) - press Ctrl+C to exit (type h() ENTER for help)
+{% highlight elixir %}
 iex(1)> :inet_res.lookup('erlang.com', :in, :mx)
 [{20, 'mail.erlang.com'}]
 {% endhighlight %}
