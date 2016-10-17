@@ -52,6 +52,7 @@ var App = (function () {
         var input = L.DomUtil.create('input', 'search-input', form);
         input.id = 'search-input';
         input.type = 'text';
+        input.placeholder = 'Search...';
 
         form.onsubmit = self.pushQueryToHash;
 
