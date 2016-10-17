@@ -54,14 +54,8 @@ var App = (function () {
         input.id = 'search-input';
         input.type = 'text';
         input.placeholder = 'Search...';
-        input.onmouseover = function (evt) {
-          self.map.dragging.disable();
-          self.map.doubleClickZoom.disable();
-        };
-        input.onmouseout = function (evt) {
-          self.map.dragging.enable();
-          self.map.doubleClickZoom.enable();
-        }
+
+        L.DomEvent.disableClickPropagation(input);
 
         form.onsubmit = self.pushQueryToHash;
 
