@@ -12,6 +12,7 @@ var App = (function () {
     self.points && self.points.clearLayers();
 
     var term = decodeURIComponent(window.location.hash.substring(1));
+    document.getElementById('search-input').value = term;
 
     if (term === "") {
       return;
@@ -53,6 +54,14 @@ var App = (function () {
         input.id = 'search-input';
         input.type = 'text';
         input.placeholder = 'Search...';
+        input.onmouseover = function (evt) {
+          self.map.dragging.disable();
+          self.map.doubleClickZoom.disable();
+        };
+        input.onmouseout = function (evt) {
+          self.map.dragging.enable();
+          self.map.doubleClickZoom.enable();
+        }
 
         form.onsubmit = self.pushQueryToHash;
 
@@ -66,7 +75,6 @@ var App = (function () {
 
     if (window.location.hash !== "") {
       self.searchTowns();
-      document.getElementById('search-input').value = decodeURIComponent(window.location.hash.substring(1));
     }
   };
 
