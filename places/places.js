@@ -4,14 +4,14 @@ var App = (function () {
   self.pushQueryToHash = function (evt) {
     evt.stopPropagation();
     var term = document.getElementById('search-input').value;
-    window.location.hash = "#" + term;
+    window.location.hash = "#" + encodeURIComponent(term);
     return false;
   };
 
   self.searchTowns = function () {
     self.points && self.points.clearLayers();
 
-    var term = window.location.hash.substring(1);
+    var term = decodeURIComponent(window.location.hash.substring(1));
 
     if (term === "") {
       return;
@@ -66,7 +66,7 @@ var App = (function () {
 
     if (window.location.hash !== "") {
       self.searchTowns();
-      document.getElementById('search-input').value = window.location.hash.substring(1);
+      document.getElementById('search-input').value = decodeURIComponent(window.location.hash.substring(1));
     }
   };
 
