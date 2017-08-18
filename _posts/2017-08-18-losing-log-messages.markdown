@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Missing logs?! How I learned about linux logging systems"
+title:  "Missing logs?!? Learning about linux logging systems"
 date:   2017-08-18 12:48:00
 categories: centos logging journald rsyslog
 ---
@@ -15,7 +15,7 @@ We use Postfix at [Postmark](https://postmarkapp.com) for our external SMTP inte
 
 After spelunking into various log files, I finally saw something that stuck out:
 
-{% highlight %}
+{% highlight bash %}
 $ journalctl -u systemd-journald
 
 systemd-journal[4431]: Suppressed 316 messages from /system.slice/postfix.service
@@ -25,7 +25,7 @@ systemd-journal[4431]: Suppressed 453 messages from /system.slice/postfix.servic
 
 journald is the system that handles system logging in Centos 7, replacing syslog. It's a centralized logging system that all services on the system can use. Because it's central to the entire server, it has some safeguards such as rate-limiting built into it so that rogue programs can't bring down the server. However, we use our postfix logs almost as an audit system, we *need* all entries form the postfix logs. So while rate-limiting is a very smart default, it wasn't the behavior that we wanted in our system. To remove the journald rate-limiting:
 
-{% hightlight %}
+{% highlight bash %}
 # in /etc/systemd/journald.conf
 
 RateLimitInterval=0
@@ -36,7 +36,7 @@ $ systemctl restart systemd-journald
 
 Also, we had an additional step in our setup to get log messages going to a `/var/log/maillog` file where postfix logs are traditionally stored. System log messages would follow `journald -> rsyslogd -> /var/log/maillog`, so we had to adjust the rate-limiting in rsyslogd.
 
-{% hightlight %}
+{% highlight bash %}
 # in /etc/rsyslog.conf
 
 $imjournalRatelimitInterval 0
