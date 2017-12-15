@@ -13,7 +13,7 @@ man <command>
 
 Which now-a-days doesn't return all that often. Most new commands you'll install won't have a man page. Take [go](https://golang.org/).  `man go` will return an error. But almost all commands support a help flag with `-h`.
 
-{% highlight %}
+{% highlight bash %}
 $ go -h
 Go is a tool for managing Go source code.
 
