@@ -7,13 +7,13 @@ categories: bash man
 
 Man pages are great. They can be a bit hard to read but when you're trying to figure out a specific flag to `ls` ([which has a _lot_ of flags](http://linuxcommand.org/lc3_man_pages/ls1.html)) it's the best way to learn. Whenever I have questions about a command, I pop open a terminal and type 
 
-```
+{% highlight bash %}
 man <command>
-```
+{% endhighlight %}
 
 Which now-a-days doesn't return all that often. Most new commands you'll install won't have a man page. Take [go](https://golang.org/).  `man go` will return an error. But almost all commands support a help flag with `-h`.
 
-```
+{% highlight %}
 $ go -h
 Go is a tool for managing Go source code.
 
@@ -27,9 +27,9 @@ The commands are:
   clean       remove object files
   doc         show documentation for package or symbol
 ...etc etc
-```
+{% endhighlight %}
 
-I found myself typing a lot of `man go`, getting an error, and then typing `go -h`. For not just go, but other commmands as well. So I made a bash alias. In your `.bashrc` or similar file, this function changes what `man` does. It trys to run `man` for a given command and if that returns an error runs the command with `-h`.
+I found myself typing a lot of `man go`, getting an error, and then typing `go -h`. For not just go, but other commands as well. So I made a bash alias. In your `.bashrc` or similar file, this function changes what `man` does. It trys to run `man` for a given command and if that returns an error runs the command with `-h`.
 
 {% highlight bash %}
 function man_or_help() {
@@ -38,7 +38,7 @@ function man_or_help() {
   \man "$@"
 
 
-  # $? is a special variable that has the exit code of the last command. 0 is "success" and anything else means an error happend.
+  # $? is a special variable that has the exit code of the last command. 0 is "success" and anything else means an error happened.
   if [ $? -ne 0 ]
   then
     # $? was not equal to 0. So we try running the first argument with the standard help flag of `-h`.
