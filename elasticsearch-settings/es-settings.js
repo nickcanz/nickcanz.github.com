@@ -9,8 +9,8 @@ var App = (function () {
     var name = setting.name || setting.raw_name;
     var cells = `
       <td><a href="#${name}" title="Permalink">🔗</a></td>
-      <td><a target="_blank" href="https://github.com/elastic/elasticsearch/blob/v6.2.4/${setting.code_file}#L${setting.code_line}"><img style="height:32px;" src="/images/github-icon.png" alt="See code definition" /></a></td>
-      <td><a target="_blank" href="https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch"><img style="height:32px" src="/images/elasticsearch-icon.png" alt="See documentation" /></a></td>
+      <td><a target="_blank" href="https://github.com/elastic/elasticsearch/blob/v6.2.4/${setting.code_file}#L${setting.code_line}"><img style="height:24px;" src="/images/github-icon.png" alt="See code definition" /></a></td>
+      <td><a target="_blank" href="https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch"><img style="height:24px" src="/images/elasticsearch-icon.png" alt="See documentation" /></a></td>
       <td class="setting-name">${(name.length < 40) ? name : "<abbr title=\"" + self.htmlEncode(name) + "\">" + name.substring(0, 40) + "&hellip;</abbr>" }</td>
       <td>${(setting.properties || []).join(", ")}</td>
       <td>${setting.java_type}</td>
