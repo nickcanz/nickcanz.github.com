@@ -5,7 +5,7 @@ var App = (function () {
 
     if (setting["Name"] == "") {
       console.warn(setting);
-      return;
+      return null;
     }
 
     var root = document.createElement("details");
@@ -57,7 +57,10 @@ var App = (function () {
       return a["Name"].localeCompare(b["Name"]);
     })
     .map(function (setting) {
-      container.appendChild(self.generateDetails(setting));
+      var details = self.generateDetails(setting);
+      if (details) {
+        container.appendChild(details);
+      }
     });
   };
 
