@@ -10,15 +10,16 @@
       }
     </style>
   </head>
-  <body class="container-fluid">
-    <div class="jumbotron">
-      <h1>Elasticsearch settings</h1>
-      <p class="lead">Hi! This is a proof-of-concept to explore the concept "code as data". Your codebase could tell you <em>so much</em> only if it was easier to get at.</p>
-      <p>Elasticsearch is a piece of software with a lot of different settings you can tweak, but there is no one place that lists them all. I wanted to compile a full list of Elasticsearch settings. The Elasticsearch docs are great, but all the configurable settings are spread out over many different pages. I wanted to list all of these out to have a quick lookup and to help discover settings you didn't know about.</p>
-      <p>So, I used <a href="https://bblf.sh">bblfsh</a> to analyze the entire Elasticsearch codebase and get <strong>all</strong> the settings. <a href="https://github.com/nickcanz/elasticsearch-bblfsh">Take a look at the code!</a> It's definitely not perfect, but it's a good enough proof-of-concept to explore the idea.</p>
-    </div>
+  <body>
+    <div class="container-fluid">
+      <div class="jumbotron">
+        <h1>Elasticsearch settings</h1>
+        <p class="lead">Hi! This is a proof-of-concept to explore the concept "code as data". Your codebase could tell you <em>so much</em> only if it was easier to get at.</p>
+        <p>Elasticsearch is a piece of software with a lot of different settings you can tweak, but there is no one place that lists them all. I wanted to compile a full list of Elasticsearch settings. The Elasticsearch docs are great, but all the configurable settings are spread out over many different pages. I wanted to list all of these out to have a quick lookup and to help discover settings you didn't know about.</p>
+        <p>So, I used <a href="https://bblf.sh">bblfsh</a> to analyze the entire Elasticsearch codebase and get <strong>all</strong> the settings. <a href="https://github.com/nickcanz/elasticsearch-bblfsh">Take a look at the code!</a> It's definitely not perfect, but it's a good enough proof-of-concept to explore the idea.</p>
+      </div>
 
-    <section id="settings-list" class="container-fluid">
+      <section id="settings-list" class="container-fluid">
       <table class="table table-sm" id="settings-table">
         <thead>
           <tr>
@@ -34,7 +35,8 @@
         <tbody id="settings-table-body">
         </tbody>
       </table>
-    </section>
+      </section>
+    </div>
     <footer class="footer">
       <div class="container">
         <a href="https://nickcanzoneri.com">nickcanzoneri.com</a> | <a href="https://twitter.com/nick_canz">@nick_canz</a>
