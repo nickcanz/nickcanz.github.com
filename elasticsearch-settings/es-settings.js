@@ -6,14 +6,14 @@ var App = (function () {
     var name = setting["Name"] || setting["RawName"];
 
     var root = document.createElement("details");
-    var name = document.createElement("summary");
-    name.id = name;
+    var summaryElem = document.createElement("summary");
+    summaryElem.id = name;
 
     var nameLink = document.createElement("a");
     nameLink.href = `#${name}`;
     nameLink.textContent = "🔗";
-    name.appendChild(nameLink);
-    name.appendChild(document.createTextNode(name));
+    summaryElem.appendChild(nameLink);
+    summaryElem.appendChild(document.createTextNode(name));
 
     var details = document.createElement("p");
     var infoList = document.createElement("ul");
@@ -47,7 +47,7 @@ var App = (function () {
 
     details.appendChild(infoList);
 
-    root.appendChild(name);
+    root.appendChild(summaryElem);
     root.appendChild(details);
 
     return root;
