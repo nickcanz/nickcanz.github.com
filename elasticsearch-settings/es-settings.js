@@ -14,12 +14,11 @@ var App = (function () {
 
     var nameLink = document.createElement("a");
     nameLink.href = `#${setting["Name"]}`;
-    nameLink.text = setting["Name"];
+    nameLink.textContent = "🔗";
     name.appendChild(nameLink);
-
+    name.appendChild(document.createTextNode(setting["Name"]);
 
     var details = document.createElement("p");
-
     var infoList = document.createElement("ul");
 
     var typeElem = document.createElement("li");
