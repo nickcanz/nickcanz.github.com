@@ -14,7 +14,7 @@ var App = (function () {
     typeElem.textContent = `Java type: ${setting["JavaType"]}`;
 
     var defaultElem = document.createElement("li");
-    defaultElem.textContent = `Default value: ${seting["DefaultArg"]}`;
+    defaultElem.textContent = `Default value: ${setting["DefaultArg"]}`;
 
     var propertiesElem = document.createElement("li");
     propertiesElem.textContent = `Properties: ${setting["Properties"].join(", ")}`
