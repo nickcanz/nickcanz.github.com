@@ -23,21 +23,25 @@ var App = (function () {
     defaultElem.textContent = `Default value: ${setting["DefaultArg"]}`;
 
     var propertiesElem = document.createElement("li");
-    propertiesElem.textContent = `Properties: ${setting["Properties"].join(", ")}`
+    propertiesElem.textContent = `Properties: (${setting["Properties"] || []).join(", ")}`
 
     var githubLink = document.createElement("a");
     githubLink.href = `https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}`;
     githubLink.text = `Look at source for ${setting["Name"]}`;
+    var githubLinkElem = document.createElement("li");
+    githubLinkElem.appendChild(githubLink);
 
     var docsLink = document.createElement("a");
     docsLink.href = `https://www.elastic.co/search?q=${setting["Name"]}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch`;
     docsLink.text = `Search docs for ${setting["Name"]}`;
+    var docsLinkElem = document.createElement("li");
+    docsLinkElem.appendChild(docsLink);
 
     infoList.appendChild(typeElem);
     infoList.appendChild(defaultElem);
     infoList.appendChild(propertiesElem);
-    infoList.appendChild(document.createElement("li").appendChild(githubLink));
-    infoList.appendChild(document.createElement("li").appendChild(docsLink));
+    infoList.appendChild(githubLinkElem);
+    infoList.appendChild(docsLinkElem);
 
     details.appendChild(infoList);
 
