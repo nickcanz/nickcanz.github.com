@@ -2,6 +2,12 @@ var App = (function () {
   var self = {};
 
   self.generateDetails = function (setting) {
+
+    if (setting["Name"] == "") {
+      console.warn(setting);
+      return;
+    }
+
     var root = document.createElement("details");
     var name = document.createElement("summary");
     name.appendChild(document.createTextNode(setting["Name"]));
