@@ -9,7 +9,7 @@ var App = (function () {
     var name = setting["Name"] || setting["RawName"];
     var cells = `
       <td><a href="#${name}" title="Permalink">🔗</a></td>
-      <td class="setting-name">${(name.length < 60) ? name : "<abbr title=\"" + self.htmlEncode(name) + "\">" + name.substring(0, 60) + "&hellip;</abbr>" }</td>
+      <td class="setting-name">${(name.length < 50) ? name : "<abbr title=\"" + self.htmlEncode(name) + "\">" + name.substring(0, 50) + "&hellip;</abbr>" }</td>
       <td>${setting["JavaType"]}</td>
       <td>${(setting["DefaultArg"].length < 40) ? setting["DefaultArg"] : "<abbr title=\"" + self.htmlEncode(setting["DefaultArg"]) + "\">" + setting["DefaultArg"].substring(0, 40) + "&hellip;</abbr>"}</td>
       <td>${(setting["Properties"] || []).join(", ")}</td>
