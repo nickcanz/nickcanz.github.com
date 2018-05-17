@@ -3,20 +3,17 @@ var App = (function () {
 
   self.generateDetails = function (setting) {
 
-    if (setting["Name"] == "") {
-      console.warn(setting);
-      return null;
-    }
+    var name = setting["Name"] || setting["RawName"];
 
     var root = document.createElement("details");
     var name = document.createElement("summary");
-    name.id = setting["Name"];
+    name.id = name;
 
     var nameLink = document.createElement("a");
-    nameLink.href = `#${setting["Name"]}`;
+    nameLink.href = `#${name}`;
     nameLink.textContent = "🔗";
     name.appendChild(nameLink);
-    name.appendChild(document.createTextNode(setting["Name"]));
+    name.appendChild(document.createTextNode(name));
 
     var details = document.createElement("p");
     var infoList = document.createElement("ul");
@@ -32,13 +29,13 @@ var App = (function () {
 
     var githubLink = document.createElement("a");
     githubLink.href = `https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}`;
-    githubLink.text = `Look at source for ${setting["Name"]}`;
+    githubLink.text = `Look at source for ${name}`;
     var githubLinkElem = document.createElement("li");
     githubLinkElem.appendChild(githubLink);
 
     var docsLink = document.createElement("a");
-    docsLink.href = `https://www.elastic.co/search?q=${setting["Name"]}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch`;
-    docsLink.text = `Search docs for ${setting["Name"]}`;
+    docsLink.href = `https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch`;
+    docsLink.text = `Search docs for ${name}`;
     var docsLinkElem = document.createElement("li");
     docsLinkElem.appendChild(docsLink);
 
@@ -59,7 +56,7 @@ var App = (function () {
   self.init = function () {
     var container = document.getElementById("settings-list");
     ES_SETTINGS.sort(function (a, b) {
-      return a["Name"].localeCompare(b["Name"]);
+      return (a["Name"] || a["RawName"]).localeCompare((b["Name"] || b["RawName"]));
     })
     .map(function (setting) {
       var details = self.generateDetails(setting);
