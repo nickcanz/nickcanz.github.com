@@ -2,7 +2,7 @@ var App = (function () {
   var self = {};
 
   self.htmlEncode = function (str) {
-    return str.replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    return str.replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
   };
 
   self.generateTableRow = function (setting) {
