@@ -5,9 +5,9 @@ var App = (function () {
     var name = setting["Name"] || setting["RawName"];
     var cells = `
       <td><a href="#${name}" title="Permalink">🔗</a></td>
-      <td>${(name.length < 60) ? name : "<abbr title=\"" + name + "\">" + name.substring(0, 60) + "</abbr>" }&hellp;</td>
+      <td>${(name.length < 60) ? name : "<abbr title=\"" + name + "\">" + name.substring(0, 60) + "&hellip;</abbr>" }</td>
       <td>${setting["JavaType"]}</td>
-      <td>${(setting["DefaultArg"].length < 60) ? setting["DefaultArg"] : "<abbr title=\"" + setting["DefaultArg"] + "\">" + setting["DefaultArg"].substring(0, 60) + "</abbr>"}&hellip;</td>
+      <td>${(setting["DefaultArg"].length < 60) ? setting["DefaultArg"] : "<abbr title=\"" + setting["DefaultArg"] + "\">" + setting["DefaultArg"].substring(0, 60) + "&hellip;</abbr>"}</td>
       <td>${(setting["Properties"] || []).join(", ")}</td>
       <td><a href="https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}"><img style="height:32px;" src="/images/github-icon.png" alt="See code definition" /></a></td>
       <td><a href="https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch"><img style="height:32px" src="/images/elasticsearch-icon.png" alt="See documentation" /></a></td>`;
