@@ -14,18 +14,18 @@ var App = (function () {
     typeElem.textContent = `Java type: ${settings["JavaType"]}`;
 
     var defaultElem = document.createElement("li");
-    defaultElem.textContent = `Default value: ${setings["DefaultArg"]}`;
+    defaultElem.textContent = `Default value: ${seting["DefaultArg"]}`;
 
     var propertiesElem = document.createElement("li");
-    propertiesElem.textContent = `Properties: ${settings["Properties"].join(", ")}`
+    propertiesElem.textContent = `Properties: ${setting["Properties"].join(", ")}`
 
     var githubLink = document.createElement("a");
     githubLink.href = `https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}`;
-    githubLink.text = `Look at source for ${settings["Name"]}`;
+    githubLink.text = `Look at source for ${setting["Name"]}`;
 
     var docsLink = document.createElement("a");
-    docsLink.href = `https://www.elastic.co/search?q=${settings["Name"]}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch`;
-    docsLink.text = `Search docs for ${settings["Name"]}`;
+    docsLink.href = `https://www.elastic.co/search?q=${setting["Name"]}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch`;
+    docsLink.text = `Search docs for ${setting["Name"]}`;
 
     infoList.appendChild(typeElem);
     infoList.appendChild(defaultElem);
