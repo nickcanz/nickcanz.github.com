@@ -11,7 +11,7 @@ var App = (function () {
     var infoList = document.createElement("ul");
 
     var typeElem = document.createElement("li");
-    typeElem.textContent = `Java type: ${settings["JavaType"]}`;
+    typeElem.textContent = `Java type: ${setting["JavaType"]}`;
 
     var defaultElem = document.createElement("li");
     defaultElem.textContent = `Default value: ${seting["DefaultArg"]}`;
