@@ -23,7 +23,7 @@ var App = (function () {
     defaultElem.textContent = `Default value: ${setting["DefaultArg"]}`;
 
     var propertiesElem = document.createElement("li");
-    propertiesElem.textContent = `Properties: (${setting["Properties"] || []).join(", ")}`
+    propertiesElem.textContent = `Properties: ${(setting["Properties"] || []).join(", ")}`
 
     var githubLink = document.createElement("a");
     githubLink.href = `https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}`;
