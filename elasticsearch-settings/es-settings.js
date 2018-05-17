@@ -9,8 +9,8 @@ var App = (function () {
       <td>${setting["JavaType"]}</td>
       <td>${setting["DefaultArg"]}</td>
       <td>${(setting["Properties"] || []).join(", ")}</td>
-      <td><a href="https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}">See source definition for ${name}</a></td>
-      <td><a href="https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch">Search documentation for ${name}</a></td>`;
+      <td><a href="https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}"><img src="//images/github-icon.png" alt="See code definition" /></a></td>
+      <td><a href="https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch"><img src="//images/elasticsearch-icon.png" alt="See documentation" /></a></td>`;
 
     var row = document.createElement("tr");
     row.id = name;
