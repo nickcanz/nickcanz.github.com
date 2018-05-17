@@ -16,7 +16,7 @@ var App = (function () {
     nameLink.href = `#${setting["Name"]}`;
     nameLink.textContent = "🔗";
     name.appendChild(nameLink);
-    name.appendChild(document.createTextNode(setting["Name"]);
+    name.appendChild(document.createTextNode(setting["Name"]));
 
     var details = document.createElement("p");
     var infoList = document.createElement("ul");
