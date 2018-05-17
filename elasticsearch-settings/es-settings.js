@@ -1,6 +1,23 @@
 var App = (function () {
   var self = {};
 
+  self.generateTableRow = function (setting) {
+    var name = setting["Name"] || setting["RawName"];
+    var cells = `
+      <td><a href="#${name}" title="Permalink">🔗</a></td>
+      <td>${name}</td>
+      <td>${setting["JavaType"]}</td>
+      <td>${setting["DefaultArg"]}</td>
+      <td>${(setting["Properties"] || []).join(", ")}</td>
+      <td><a href="https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}">See source definition for ${name}</a></td>
+      <td><a href="https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch">Search documentation for ${name}</a></td>`;
+
+    var row = document.createElement("tr");
+    row.id = name;
+    row.innerHTML = cells;
+    return row;
+  };
+
   self.generateDetails = function (setting) {
 
     var name = setting["Name"] || setting["RawName"];
@@ -54,12 +71,12 @@ var App = (function () {
   };
 
   self.init = function () {
-    var container = document.getElementById("settings-list");
+    var container = document.getElementById("settings-table-body");
     ES_SETTINGS.sort(function (a, b) {
       return (a["Name"] || a["RawName"]).localeCompare((b["Name"] || b["RawName"]));
     })
     .map(function (setting) {
-      var details = self.generateDetails(setting);
+      var details = self.generateTableRow(setting);
       if (details) {
         container.appendChild(details);
       }
