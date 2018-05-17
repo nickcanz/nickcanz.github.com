@@ -23,7 +23,7 @@ var App = (function () {
     githubLink.href = `https://github.com/elastic/elasticsearch/blob/master/${setting["CodeFile"]}#L${setting["CodeLine"]}`;
     githubLink.text = `Look at source for ${settings["Name"]}`;
 
-    var docsLink = document.createElement('a");
+    var docsLink = document.createElement("a");
     docsLink.href = `https://www.elastic.co/search?q=${settings["Name"]}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch`;
     docsLink.text = `Search docs for ${settings["Name"]}`;
 
