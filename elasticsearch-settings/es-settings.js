@@ -10,7 +10,13 @@ var App = (function () {
 
     var root = document.createElement("details");
     var name = document.createElement("summary");
-    name.appendChild(document.createTextNode(setting["Name"]));
+    name.id = setting["Name"];
+
+    var nameLink = document.createElement("a");
+    nameLink.href = `#${setting["Name"]}`;
+    nameLink.text = setting["Name"];
+    name.appendChild(nameLink);
+
 
     var details = document.createElement("p");
 
