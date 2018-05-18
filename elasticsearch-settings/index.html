@@ -5,6 +5,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
     <style type="text/css">
+
+      table tr a.permalink {
+        display: none;
+      }
+
+      table tr:hover a.permalink {
+        display: visible;
+      }
+
       .setting-name {
         text-transform: lowercase;
       }
@@ -41,7 +50,7 @@
       </div>
 
       <section id="settings-list">
-      <table class="table table-sm" id="settings-table">
+      <table class="table table-sm table-hover" id="settings-table">
         <thead>
           <tr>
             <th></th>

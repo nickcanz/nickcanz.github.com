@@ -8,7 +8,7 @@ var App = (function () {
   self.generateTableRow = function (setting) {
     var name = setting.name || setting.raw_name;
     var cells = `
-      <td><a href="#${name}" title="Permalink">🔗</a></td>
+      <td><a class="permalink" href="#${name}" title="Permalink">🔗</a></td>
       <td><a title="See the code" target="_blank" href="https://github.com/elastic/elasticsearch/blob/v6.2.4/${setting.code_file}#L${setting.code_line}"><img style="height:24px;" src="/images/github-icon.png" alt="GitHub icon" /></a></td>
       <td><a title="See the documentation" target="_blank" href="https://www.elastic.co/search?q=${name}&section=Learn%2FDocs%2FElasticsearch%2FReference%2F6.2&tags=Elasticsearch"><img style="height:24px" src="/images/elasticsearch-icon.png" alt="Elasticsearch icon" /></a></td>
       <td class="setting-name">${name}</td>
