@@ -7,7 +7,7 @@ categories: bash command-line data
 
 ## Why use the command line at all?
 
-Like the total hopefully gets across, I'm not using the command line to do advanced data science. I'm doing first aid, not surgery. There are some basic questions you can answer by using the command line instead of having to write Python or R or import into a database. What I'm writing here isn't the most efficient use of command line utilities, but it will get the job done, even for files a few gigabytes in size.
+Like the title hopefully gets across, I'm not using the command line to do advanced data science. I'm doing first aid, not surgery. There are some basic questions you can answer by using the command line instead of having to write Python or R or import into a database. What I'm writing here isn't the most efficient use of command line utilities, but it will get the job done, even for files a few gigabytes in size.
 
 For my work, I'll often have a CSV or a semi-structured log file on a server somewhere that I want to "query" quickly without having to download the file to my laptop to analyze. Servers that run code have constraints in that they aren't going to have fancy Python packages or other more advanced tools. What they're going to have are the basic core utilities included on a linux install.
 
