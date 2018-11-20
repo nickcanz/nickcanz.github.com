@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Captioned gifs with ffmpeg"
-date:   2018-11-21 08:00:00
+date:   2018-11-20 08:00:00
 categories: ffmpeg gif
 ---
 
@@ -19,9 +19,9 @@ The best solution would be to make a captioned gif! And we can do it easily with
 
 Since we want to work with captions, we want to make sure we install ffmpeg with support for [`libass`](https://github.com/libass/libass) a library for the Advanced Substation Alpha format of subtitling. On OSX, the full command for the homebrew install that I used was:
 
-```
+{% highlight %}
 brew install ffmpeg --with-libass
-```
+{% endhighlight %}
 
 ## SRT files - how to specify captions
 
@@ -35,15 +35,15 @@ The SRT file format is a very simple way to define subtitles. As described on [h
 
 For the gif at the top of this post, the SRT file consisted of:
 
-```
+{% highlight %}
 1
 00:00:00,000 --> 00:00:08,000
 Making the magic happen.
-```
+{% endhighlight %}
 
 If we were captioning a vide of someone dancing the hokey pokey it would look like:
 
-```
+{% highlight %}
 1
 00:00:00,000 --> 00:00:05,000
 You put your right foot in.
@@ -59,7 +59,7 @@ You put your right foot in.
 4
 00:00:15,000 --> 00:00:20,000
 And you shake it all about.
-```
+{% endhighlight %}
 
 All your captions are now in a very simple (if verbose) text file format!
 
@@ -72,9 +72,9 @@ To create the gif at the start of this post I had two different files.
 
 With ffmpeg installed, that's all you need to make a captioned gif!
 
-```
+{% highlight %}
 ffmpeg -i ffmpeg_example.mov -vf subtitles=ffmpeg_example.srt -r 10 ffmpeg_example.gif
-```
+{% endhighlight %}
 
 Let's break down the arguments.
 
