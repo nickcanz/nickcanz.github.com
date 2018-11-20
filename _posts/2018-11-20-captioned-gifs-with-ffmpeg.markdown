@@ -19,7 +19,7 @@ The best solution would be to make a captioned gif! And we can do it easily with
 
 Since we want to work with captions, we want to make sure we install ffmpeg with support for [`libass`](https://github.com/libass/libass) a library for the Advanced Substation Alpha format of subtitling. On OSX, the full command for the homebrew install that I used was:
 
-{% highlight %}
+{% highlight bash %}
 brew install ffmpeg --with-libass
 {% endhighlight %}
 
@@ -35,7 +35,7 @@ The SRT file format is a very simple way to define subtitles. As described on [h
 
 For the gif at the top of this post, the SRT file consisted of:
 
-{% highlight %}
+{% highlight bash %}
 1
 00:00:00,000 --> 00:00:08,000
 Making the magic happen.
@@ -43,7 +43,7 @@ Making the magic happen.
 
 If we were captioning a vide of someone dancing the hokey pokey it would look like:
 
-{% highlight %}
+{% highlight bash %}
 1
 00:00:00,000 --> 00:00:05,000
 You put your right foot in.
@@ -72,7 +72,7 @@ To create the gif at the start of this post I had two different files.
 
 With ffmpeg installed, that's all you need to make a captioned gif!
 
-{% highlight %}
+{% highlight bash %}
 ffmpeg -i ffmpeg_example.mov -vf subtitles=ffmpeg_example.srt -r 10 ffmpeg_example.gif
 {% endhighlight %}
 
