@@ -20,7 +20,7 @@ I've worked with Elasticsearch for a number of years. It's been a major project 
   <dd>A group of documents. A table in SQL. Older versions of Elasticsearch allowed you to have different document types in a single index, i.e. a document type for books and a document type for authors, but this is no longer allowed, all documents in an index should be the same type.</dd>
 
   <dt><strong>Shard</strong></dt>
-  <dd>An Index is broken up into a number of shards and this is the way that data is spread across many servers in an Elasticsearch cluster. Each shard is a [lucene index](https://lucene.apache.org/) which is the underlying engine of Elasticsearch.</dd>
+  <dd>An Index is broken up into a number of shards and this is the way that data is spread across many servers in an Elasticsearch cluster. Each shard is a <a href="https://lucene.apache.org">lucene index</a> which is the underlying engine of Elasticsearch.</dd>
 </dl>
 
 ## Get used to curl
