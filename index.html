@@ -4,10 +4,19 @@ layout: default
 
 <div class="home">
   <h1 class="page-heading">Hi</h1>
-  <p>I'm Nick.</p>
-  <p>I like building software. I've worked in tech for over ten years and live near Philadelphia.</p>
+  <p>I'm Nick! I'm a software engineer that likes building infrastructure.</p>
 
-  <h3>Where I've worked</h3>
+  <ul>
+    <li><a href="#about-me">About Me</a></li>
+    <li><a href="#personal-projects">Personal Projects</a></li>
+    <li><a href="#external-writing">External Writing</a></li>
+    <li><a href="#public-speaking">Public Speaking</a></li>
+    <li><a href="#personal-writing">Personal Writing</a></li>
+    <li><a href="#contact-me">Contact Me</a></li>
+  </ul>
+
+  <hr/>
+  <h2 id="about-me">About Me</h2>
 
   <ul>
     <li>I currently work at <a href="https://github.com">GitHub</a> as a senior engineer building infrastructure automation and tooling.</li>
@@ -16,14 +25,12 @@ layout: default
     <li><a href="https://www.algorithmics.com">Algorithmics</a> a fintech company in the collateral/risk management space which was bought by <a href="https://www.ibm.com">IBM</a>. I was an engineer writing an ASP.NET web app interacting with a SOAP backend.</li>
     <li><a href="https://www.dvrpc.org">DVRPC</a> a regional planning organization. I was a web developer building JS applications.</li>
   </ul>
-    
-  <h2 class="page-heading">Find me at</h2>
-  <p><a href="https://www.github.com/nickcanz"><span class="icon  icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg></span>nickcanz</a></p>
-  <p><a href="https://www.twitter.com/nick_canz"><span class="icon  icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809 c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg></span>@nick_canz</a></p>
-  <p><a href="https://stackoverflow.com/users/282975/nick-canzoneri">stackoverflow</a></p>
-  <p>Feel free to contact me at: <a href="mailto:hi@nickcanzoneri.com">hi@nickcanzoneri.com</a></p>
 
-  <h2 class="page-heading">Personal Projects</h2>
+  <hr/>
+  <h2 id="personal-projects" class="page-heading">Personal Projects</h2>
+  <h3><a href="https://nickcanzoneri.com/representative">Representative</a></h3>
+  <p>This is a simple page that compares how many people each representative in a country represents.</p>
+
   <h3><a href="https://nickcanzoneri.com/elasticsearch-settings">Elasticsearch settings code analysis</a></h3>
   <p>I explored analyzing the Elasticsearch codebase to find all of the configurable setting values to put them all in one place. Code to generate the list is found in the <a href="https://github.com/nickcanz/elasticsearch-bblfsh">elasticsearch-bblfsh repo</a>.</p>
 
@@ -34,7 +41,114 @@ layout: default
   <p>I had a problem of following different provider's status pages for updates when they post issues. This Chrome extension periodically checks RSS feeds and pops a notification when it detects a new entry to alert you.</p>
 
 
-  <h2 class="page-heading">Posts</h2>
+  <hr/>
+  <h2 id="external-writing" class="page-heading">External Writing</h2>
+
+  <ul class="post-list">
+    <li>
+      <h3>
+        <span class="post-meta">GitHub Engineering Blog</span>
+        <a class="post-link" href="https://github.blog/2019-03-05-vulcanizer-a-library-for-operating-elasticsearch/">Vulcanizer: a library for operating Elasticsearch</a>
+      </h3>
+    </li>
+
+    <li>
+      <h3>
+        <span class="post-meta">Postmark Blog</span>
+        <a class="post-link" href="https://postmarkapp.com/blog/tools-we-use-curator-for-elasticsearch">Tools we use: Curator for Elasticsearch</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <a class="post-link" href="https://postmarkapp.com/blog/introducing-full-dmarc-support-with-custom">Introducing full DMARC support with custom Return-Path domains</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <a class="post-link" href="https://postmarkapp.com/blog/were-doubling-down-on-elasticsearch">We’re doubling down on Elasticsearch!</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <a class="post-link" href="https://postmarkapp.com/blog/getting-bounces-is-now-about-7-times-faster">Getting bounces is now (about) 7 times faster</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <a class="post-link" href="https://postmarkapp.com/blog/review-of-partial-outage-on-2014-04-28">Review of partial outage on 2014-04-28</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <a class="post-link" href="https://postmarkapp.com/blog/better-bounce-categorization-in-postmark">Better bounce categorization in Postmark</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <a class="post-link" href="https://postmarkapp.com/blog/build-a-csv-of-bounced-emails-using-the-postmark">Build a CSV of bounced emails using the Postmark API</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <a class="post-link" href="https://postmarkapp.com/blog/using-chef-on-windows-is-easier-than-you-think">Using Chef on Windows is easier than you think</a>
+      </h3>
+    </li>
+  </ul>
+
+  <hr/>
+  <h2 id="public-speaking" class="page-heading">Public Speaking</h2>
+  <ul class="post-list">
+    <li>
+      <h3>
+        <span class="post-meta">csv,conf,v4 2019</span>
+        <a class="post-link" href="https://www.youtube.com/watch?v=byEzXt2Ghsc">Bash <3's CSVs: Data Analysis on the cmdline</a>
+      </h3>
+    </li>
+    <li>
+      <h3>
+        <span class="post-meta">DevOpsDays Philly 2018</span>
+        <a class="post-link" href="https://www.youtube.com/watch?v=Vp3m2_YJ2Tk">Command line-first data analysis</a>
+      </h3>
+    </li>
+    <li>
+      <span class="post-meta">Software as Craft Philly 2017</span>
+      <h3><a href="https://www.youtube.com/watch?v=D3k7-IqSKLM" class="post-link">The Modern Email Experience</a></h3>
+      <p>This talk went over all the features that an email service provider can provide to your webapp for minimal implementation on your part. Receiving emails, bounce handling, and tracking are powerful components to build a full featured email experience for your application.</p>
+    </li>
+    <li>
+        <span class="post-meta">Laracon Online 2017</span>
+        <h3><a href="https://vimeo.com/showcase/7060635/video/207656313" class="post-link">What developers should know about email</a></h3>
+        <p>This talk goes into detail on how emails are built up and sent out. Among other things, I covered how MX records work, what the raw format of an email is, and how anti-spoofing measures SPF, DKIM, and DMARC work together.</p>
+    </li>
+    <li>
+        <span class="post-meta">Central PA Open Source Conference 2014</span>
+        <h3>A dev+ops view of Elasticsearch</h3>
+        <p>This is a talk I gave with a fellow engineer giving an ops point of view demoing how easy it is to build out an Elasticsearch cluster.</p>
+    </li>
+    <li>
+        <span class="post-meta">Philly Devops 2014</span>
+        <h3>How Postmark Uses Elasticsearch</h3>
+        <p>This is a talk I gave with a fellow engineer how Postmark built out our Elasticsearch cluster and how we store and query events.</p>
+    </li>
+    <li>
+        <span class="post-meta">Redsnake Philly 2012</span>
+        <h3>Vagrant: Virtualize your dev environment</h3>
+        <p>Redsnake Philly is an annual meeting of the Python and Ruby user groups. This talk was about Vagrant, a command line utility written in Ruby that basically creates a DSL on top of VirtualBox and Puppet/Chef. The power of this is that it allows you to source control the environments that your application needs to run.</p>
+    </li>
+    <li>
+        <span class="post-meta">Philly Python User Group 2011</span>
+        <h3>Make maps the FLOSS way, with Mapnik!</h3>
+        <p>The topic of this talk was the open source mapping utility Mapnik. Written in C++, but with first-class Python bindings, it is a great example of the power available to the Python community. Open data releases by both the public and private sector have been on the rise, but the tools needed to work with this data are improving at a slower pace. With geographic data, commercial software from ESRI is, far and away, the standard. However, this does not need to be the case. In this talk, I gave several examples using Mapnik and open government data to create my open static images of maps and web-based "slippy" maps.</p>
+    </li>
+    <li>
+        <span class="post-meta">Philly.NET Code Camp 2011</span>
+        <h3>DSLs in F#</h3>
+        <p>This talk went over the basics of F# syntax, the pros and cons of using DSLs and why F# is a good language to build a DSL in.</p>
+    </li>
+  </ul>
+
+  <hr/>
+  <h2 id="personal-writing" class="page-heading">Personal Writing</h2>
 
   <ul class="post-list">
     {% for post in site.posts %}
@@ -48,5 +162,12 @@ layout: default
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+
+  <hr/>
+  <h2 id="contact-me" class="page-heading">Contact Me</h2>
+  <p><a href="https://www.github.com/nickcanz"><span class="icon  icon--github"><svg viewBox="0 0 16 16"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg></span>nickcanz</a></p>
+  <p><a href="https://www.twitter.com/nick_canz"><span class="icon  icon--twitter"><svg viewBox="0 0 16 16"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809 c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg></span>@nick_canz</a></p>
+  <p>Feel free to contact me at: <a href="mailto:hi@nickcanzoneri.com">hi@nickcanzoneri.com</a></p>
 
 </div>
