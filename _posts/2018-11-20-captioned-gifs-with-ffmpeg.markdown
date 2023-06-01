@@ -20,7 +20,7 @@ The best solution would be to make a captioned gif! And we can do it easily with
 Since we want to work with captions, we want to make sure we install ffmpeg with support for [`libass`](https://github.com/libass/libass) a library for the Advanced Substation Alpha format of subtitling. On OSX, the full command for the homebrew install that I used was:
 
 {% highlight bash %}
-brew install ffmpeg --with-libass
+brew install ffmpeg
 {% endhighlight %}
 
 ## SRT files - how to specify captions
